@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE61C5AC8965789C2B245EE /* Pods_forum_revamped.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F698D3202C9B5E3FFEFC84A0 /* Pods_forum_revamped.framework */; };
 		4BA0DCCA1F3A1CC300DED8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0DCC91F3A1CC300DED8A8 /* AppDelegate.swift */; };
 		4BA0DCCC1F3A1CC300DED8A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0DCCB1F3A1CC300DED8A8 /* ViewController.swift */; };
 		4BA0DCCF1F3A1CC300DED8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA0DCCD1F3A1CC300DED8A8 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 		4BA0DCDB1F3A4B1500DED8A8 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		4BA0DCDD1F3A4C3A00DED8A8 /* ForumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BA0DCDF1F3A55F400DED8A8 /* forumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = forumTableViewCell.swift; sourceTree = "<group>"; };
+		BA7E31DD3C90A65B055CBE7C /* Pods-forum_revamped.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-forum_revamped.release.xcconfig"; path = "Pods/Target Support Files/Pods-forum_revamped/Pods-forum_revamped.release.xcconfig"; sourceTree = "<group>"; };
+		BCDE6DA6865B50AADD18A985 /* Pods-forum_revamped.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-forum_revamped.debug.xcconfig"; path = "Pods/Target Support Files/Pods-forum_revamped/Pods-forum_revamped.debug.xcconfig"; sourceTree = "<group>"; };
+		F698D3202C9B5E3FFEFC84A0 /* Pods_forum_revamped.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_forum_revamped.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE61C5AC8965789C2B245EE /* Pods_forum_revamped.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2374A11BF7339FA5488B05E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6DA6865B50AADD18A985 /* Pods-forum_revamped.debug.xcconfig */,
+				BA7E31DD3C90A65B055CBE7C /* Pods-forum_revamped.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4BA0DCBD1F3A1CC300DED8A8 = {
 			isa = PBXGroup;
 			children = (
 				4BA0DCC81F3A1CC300DED8A8 /* forum_revamped */,
 				4BA0DCC71F3A1CC300DED8A8 /* Products */,
+				2374A11BF7339FA5488B05E4 /* Pods */,
+				9BB3CBE022C46FDF1F662ADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,14 @@
 			path = forum_revamped;
 			sourceTree = "<group>";
 		};
+		9BB3CBE022C46FDF1F662ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F698D3202C9B5E3FFEFC84A0 /* Pods_forum_revamped.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BA0DCD81F3A1CC300DED8A8 /* Build configuration list for PBXNativeTarget "forum_revamped" */;
 			buildPhases = (
+				02495A849114C68880304CC6 /* [CP] Check Pods Manifest.lock */,
 				4BA0DCC21F3A1CC300DED8A8 /* Sources */,
 				4BA0DCC31F3A1CC300DED8A8 /* Frameworks */,
 				4BA0DCC41F3A1CC300DED8A8 /* Resources */,
+				AD7BA31B77314AC0704A5A47 /* [CP] Embed Pods Frameworks */,
+				154C14EFC326F81F458CDDB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02495A849114C68880304CC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		154C14EFC326F81F458CDDB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-forum_revamped/Pods-forum_revamped-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD7BA31B77314AC0704A5A47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-forum_revamped/Pods-forum_revamped-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BA0DCC21F3A1CC300DED8A8 /* Sources */ = {
@@ -273,6 +348,7 @@
 		};
 		4BA0DCD91F3A1CC300DED8A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDE6DA6865B50AADD18A985 /* Pods-forum_revamped.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22MQY5GLD5;
@@ -286,6 +362,7 @@
 		};
 		4BA0DCDA1F3A1CC300DED8A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7E31DD3C90A65B055CBE7C /* Pods-forum_revamped.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22MQY5GLD5;

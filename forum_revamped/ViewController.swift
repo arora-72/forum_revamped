@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,6 +28,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.inputTextField.delegate = self
         
         print("view did load")
         print(stringArray)
@@ -86,12 +88,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             noobieString.append(userData);
             print(noobieString.count);
             refreshArray();
+            inputTextField.resignFirstResponder();
          
         }else{
             print("data not entered");
         }
 
     }
+
+    
+    override func viewWillLayoutSubviews() {
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     
     func refreshArray(){
         self.stringArray = []
@@ -114,7 +123,35 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height );
+    }
     
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    // UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // User finished typing (hit return): hide the keyboard.
+        inputTextField.resignFirstResponder()
+        return true
+    }
+    
+    
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        inputTextField.text="";
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        inputTextField.text="";
+    }
 }//class
 

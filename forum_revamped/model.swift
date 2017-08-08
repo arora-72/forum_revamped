@@ -30,10 +30,12 @@ class Model: NSObject, UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! forumTableViewCell
         print(colorArray);
         cell.ForumLabel.text = colorArray[tableView.tag-1][indexPath.row];
+        cell.selectionStyle = .none
 //        cell.backgroundColor = colorArray[tableView.tag-1][indexPath.row]
         
         return cell
     }
+    
     
     
        
