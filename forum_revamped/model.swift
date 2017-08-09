@@ -14,8 +14,8 @@ class Model: NSObject, UITableViewDelegate, UITableViewDataSource{
     
     
     var colorArray: [[String]] = [];
-    
-    
+    var headerArray = [["Forum for noobies"], ["Forum for moderators"]];
+ 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     
@@ -28,6 +28,7 @@ class Model: NSObject, UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! forumTableViewCell
+        
         print(colorArray);
         cell.ForumLabel.text = colorArray[tableView.tag-1][indexPath.row];
         cell.selectionStyle = .none
@@ -35,6 +36,14 @@ class Model: NSObject, UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if headerArray{
+//            return "sharingan"
+//        }else{
+//            return "hadouken"
+//        }
+//    }
     
     
     
