@@ -31,9 +31,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.inputTextField.delegate = self
         
+        
         print("view did load")
         print(stringArray)
         loadData()
+        automaticallyAdjustsScrollViewInsets = false;
         
     }
     
@@ -43,6 +45,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("load data")
         print(dataSourceModel.colorArray);
         self.collectionView.reloadData()
+
+        
 
     }
     @IBAction func reloadData(_ sender: Any) {
@@ -74,6 +78,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.tableView.dataSource = dataSourceModel
         cell.tableView.delegate = dataSourceModel
         cell.tableView.reloadData()
+        
         
         
         return cell

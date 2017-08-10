@@ -24,9 +24,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="owz-mw-Ntg">
-                                <rect key="frame" x="0.0" y="-23.5" width="375" height="660.5"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="CBV-10-6Lm">
+                                <rect key="frame" x="0.0" y="67" width="375" height="533.5"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="CBV-10-6Lm">
                                     <size key="itemSize" width="378" height="505"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -34,10 +34,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="d1r-O2-Inj" customClass="ForumCollectionViewCell" customModule="forum_revamped" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="46" width="378" height="505"/>
+                                        <rect key="frame" x="0.0" y="-18" width="378" height="505"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="378" height="506"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="378" height="505"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPS-m1-6wQ">
@@ -48,7 +48,7 @@
                                                             <rect key="frame" x="0.0" y="28" width="378" height="89"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X37-XN-W9P" id="F2n-3G-Smv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="88"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="89"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your text here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt1-UV-31A">
@@ -104,21 +104,43 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egl-8q-abk">
-                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type your query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-w4-hI3">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Meh-c5-4NL">
-                                        <rect key="frame" x="339" y="0.0" width="36" height="30"/>
-                                        <state key="normal" title="Send"/>
-                                        <connections>
-                                            <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7o-lp-dNj"/>
-                                        </connections>
-                                    </button>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egg-yz-7QS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fqp-kz-65E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Meh-c5-4NL">
+                                                    <rect key="frame" x="300" y="7" width="75" height="35"/>
+                                                    <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7o-lp-dNj"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type your query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-w4-hI3">
+                                                    <rect key="frame" x="0.0" y="7" width="300" height="35"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="KI8-w4-hI3" firstAttribute="width" secondItem="fqp-kz-65E" secondAttribute="width" multiplier="0.8" id="5ID-eP-6N7"/>
+                                                <constraint firstItem="Meh-c5-4NL" firstAttribute="leading" secondItem="KI8-w4-hI3" secondAttribute="trailing" id="5Z3-vP-ePr"/>
+                                                <constraint firstItem="KI8-w4-hI3" firstAttribute="centerY" secondItem="fqp-kz-65E" secondAttribute="centerY" id="LO9-bd-Zuu"/>
+                                                <constraint firstItem="KI8-w4-hI3" firstAttribute="centerX" secondItem="fqp-kz-65E" secondAttribute="centerX" constant="-37.5" id="Pkj-vQ-Qis"/>
+                                                <constraint firstItem="Meh-c5-4NL" firstAttribute="centerY" secondItem="fqp-kz-65E" secondAttribute="centerY" id="hIE-ln-cpw"/>
+                                                <constraint firstItem="Meh-c5-4NL" firstAttribute="centerX" secondItem="fqp-kz-65E" secondAttribute="centerX" constant="150" id="jFt-BJ-p0N"/>
+                                                <constraint firstItem="Meh-c5-4NL" firstAttribute="height" secondItem="fqp-kz-65E" secondAttribute="height" multiplier="0.7" id="jf5-Fy-V25"/>
+                                                <constraint firstItem="Meh-c5-4NL" firstAttribute="width" secondItem="fqp-kz-65E" secondAttribute="width" multiplier="0.2" id="q6h-iS-9Tj"/>
+                                                <constraint firstItem="KI8-w4-hI3" firstAttribute="height" secondItem="fqp-kz-65E" secondAttribute="height" multiplier="0.7" id="s5o-Yy-SGE"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -126,21 +148,14 @@
                         <constraints>
                             <constraint firstItem="Egl-8q-abk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0IP-Kz-IgV"/>
                             <constraint firstItem="owz-mw-Ntg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CTc-eY-4Ae"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="owz-mw-Ntg" secondAttribute="bottom" constant="30" id="ItR-qM-vim"/>
-                            <constraint firstItem="owz-mw-Ntg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.99" id="Vxq-L8-IDP"/>
+                            <constraint firstItem="owz-mw-Ntg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="Vxq-L8-IDP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Egl-8q-abk" secondAttribute="bottom" id="XhR-PD-Q4x"/>
                             <constraint firstItem="owz-mw-Ntg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YML-8m-zWV"/>
                             <constraint firstItem="Egl-8q-abk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qg2-0l-0Hw"/>
-                            <constraint firstItem="Egl-8q-abk" firstAttribute="top" secondItem="owz-mw-Ntg" secondAttribute="bottom" id="vWJ-5c-vnG"/>
+                            <constraint firstItem="owz-mw-Ntg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zJa-VO-87D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Forum" id="ifY-Mv-uDw">
-                        <barButtonItem key="rightBarButtonItem" title="RELOAD" id="UUc-HE-Nf9">
-                            <connections>
-                                <action selector="reloadData:" destination="BYZ-38-t0r" id="mYR-Vj-CmO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Forum" id="ifY-Mv-uDw"/>
                     <connections>
                         <outlet property="collectionView" destination="owz-mw-Ntg" id="lZ1-4J-ER1"/>
                         <outlet property="inputTextField" destination="KI8-w4-hI3" id="jz3-WU-qio"/>
