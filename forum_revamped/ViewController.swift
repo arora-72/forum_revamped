@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var likeButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var inputTextField: UITextField!
@@ -69,6 +70,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return collectionArray.count;
     }
     
+    @IBAction func likeButtonClicked(_ sender: Any) {
+        
+        print("like button clicked");
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ForumCollectionViewCell
